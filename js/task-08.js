@@ -3,7 +3,7 @@ const loginForm = document.querySelector('.login-form');
 loginForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
-  event.preventDefault(); // Зупиняє перезавантаження сторінки
+  event.preventDefault(); 
 
   const emailInput = loginForm.elements.email;
   const passwordInput = loginForm.elements.password;
