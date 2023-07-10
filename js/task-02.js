@@ -7,11 +7,16 @@
   "Condiments",
 ];
 
-const ulIngredients = document.getElementById('ingredients');
+const ingredientsEl = document.querySelector("#ingredients");
 
-ingredients.forEach(ingredient => {
-  const li = document.createElement('li');
-  li.textContent = ingredient;
-  li.classList.add('item');
-  ulIngredients.appendChild(li);
+console.log(ingredientsEl);
+console.log(ingredients);
+
+const listRefs = ingredients.map((ingredient) => {
+  const listRef = document.createElement("li");
+  listRef.textContent = ingredient;
+  listRef.classList.add("item");
+  return listRef;
 });
+
+ingredientsEl.append(...listRefs);
